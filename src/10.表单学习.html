@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>登录注册</title>
+</head>
+<body>
+
+<h1><strong>Sign in</strong></h1>
+
+<!--表单form
+action:表单提交的位置，可以是网站，也可以是请求处理地址
+method:get  post 提交方式
+      get  方式提交可以在url中看到提交的信息  不安全  高效
+      post  方式提交比较安全，可以提交大文件
+
+-->
+
+<form action="1.firsthtml.html"  method="get">
+<!--  文本输入框：<input type="text"
+      name:文本框前面的名称
+      value="zch" 默认初始值
+      maxlength="8" 字符数目最大值
+      size="30"  文本框长度
+
+-->
+  <p>name : <input type="text"  name="usrname"   placeholder="请输入用户名"  required maxlength="8" size="30"></p>
+<!--  密码框：<input type="password"-->
+  <p>passwords: <input type="password" name="password" value="123" size="30" hidden ></p>
+
+<!--
+readonly  只读
+disable   禁用
+hidden    隐藏
+-->
+<!--单选框标签
+input type="radio":单选框标签
+ value="boy"  ：单选框的值
+ name="sex"：表示组
+-->
+  <p>性别：
+    <input type="radio" value="boy" name="sex"  />男
+    <input type="radio" value="girl" name="sex" disabled/>女
+  </p>
+<!--  多选框  checkbox-->
+
+  <p>爱好：
+    <input type="checkbox" value="sleep" name="hobby">睡觉
+    <input type="checkbox" value="code" name="hobby"  checked>编程
+    <input type="checkbox" value="game" name="hobby">游戏
+    <input type="checkbox" value="chat" name="hobby">聊天
+  </p>
+
+<!--按钮  button
+        <input type="button"  普通按钮
+        <input type="image"   图像按钮
+        <input type="submit"> 提交按钮
+        <input type="reset">  重置按钮   清空表单
+
+-->
+  <p>按钮:
+    <input type="button" name="btn1" value="点击变长" >
+    <input type="image" src="resources/images/aa59d139b93dde70ff207187c9f1d8bd.gif" width="400">
+  </p>
+
+<!--  下拉框  列表框
+-->
+  <p>下拉框
+    <select name="列表名称" >
+      <option value="China">中国</option>
+      <option value="America">美国</option>
+      <option value="Switzerland"  selected>瑞士</option>
+      <option value="India">印度</option>
+    </select>
+  </p>
+<!--  文本域-->
+  <p>反馈：
+  <textarea name="textarea"  cols="50" rows="10">文本内容</textarea>
+  </p>
+
+<!--  文件域-->
+  <p>
+  <input type="file" name="files">
+  <input type="button"  value="上传"  name="upload">
+  </p>
+
+<!-- 邮件验证-->
+  <p>邮件:
+    <input type="email" name="email">
+  </p>
+<!--  邮箱验证-->
+  <p>url:
+    <input type="url" name="url">
+  </p>
+
+<!--数字验证-->
+  <p>数字:
+    <input type="number"  name="num" max="10000" min="0" step="1">
+  </p>
+<!--滑块验证-->
+  <p>音量:
+    <input type="range" name="voice" min="0" max="100"  >
+  </p>
+<!--  搜索框-->
+  <p>搜索框:
+    <input type="search" name="search">
+  </p>
+<!--增强鼠标可用性-->
+  <p>
+    <label for="mark">你点我试试</label>
+    <input type="text" id="mark">
+  </p>
+<!--  简单验证
+required  不能为空
+placeholder  提示信息
+pattern    正则表达式
+-->
+
+
+
+
+  <input type="submit" >
+  <input type="reset"  value="清空表单">
+
+
+
+</form>
+</body>
+</html>
